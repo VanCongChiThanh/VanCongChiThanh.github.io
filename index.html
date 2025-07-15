@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Văn Công Chí Thành</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content fade-in">
+          <h1>Van Cong Chi Thanh</h1>
+          <p>Backend Developer | Software Engineering Student</p>
+          <div class="mt-4">
+            <a href="#projects" class="btn btn-light btn-lg me-3">
+              <i class="fas fa-code me-2"></i>View Projects
+            </a>
+            <a href="#contact" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-envelope me-2"></i>Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="text-center">
+              <p class="lead">
+                I am a final-year student at Danang University of Science and
+                Technology with backend experience in Java and Spring Boot, and
+                personal frontend projects using Vue.js. I am looking for a
+                full-stack internship to gain practical experience and grow into
+                a full-stack developer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Work experience & Education</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="experience-card">
+              <h5><i class="fas fa-laptop-code me-2"></i>Backend Developer</h5>
+              <div class="company-name">Sucodev Vietnam</div>
+              <div class="duration">02/2025 - 06/2025</div>
+              <ul class="mb-0">
+                <li>
+                  Implemented and enhanced features for an enterprise management
+                  application using Spring boot,PostgreSQL.
+                </li>
+                <li>
+                  Designed and implemented multi-channel messaging management
+                  functionalities integrated with Facebook and Zalo APIs
+                </li>
+                <li>
+                  Developed an internal note-taking application for company use,
+                  utilizing Spring Boot, MySQL, and RabbitMQ.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="experience-card">
+              <h5>
+                <i class="fas fa-graduation-cap me-2"></i>Software Engineer
+                Student
+              </h5>
+              <div class="company-name">
+                Danang University of Science and Technology
+              </div>
+              <div class="duration">2022 - Present</div>
+              <ul class="mb-0">
+                <li>GPA: 3.51/4</li>
+                <li>
+                  TOEIC: 645 (03/2024) - Able to read documents and communicate
+                  at an intermediate level.
+                </li>
+                <li>CES English Club</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+    <section class="py-5" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div
+              class="project-card"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal1"
+            >
+              <div class="project-image project-ai">
+                <div class="project-overlay">
+                  <button class="view-details-btn">
+                    <i class="fas fa-eye me-2"></i>View Details
+                  </button>
+                </div>
+              </div>
+              <div class="p-3">
+                <h5 class="mb-2">AI Speaking Practice</h5>
+                <p class="text-muted mb-3">
+                  A web application for practicing English speaking with AI and
+                  real-time conversation.
+                </p>
+                <div>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">WebSocket</span>
+                  <span class="tech-tag">AI Integration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div
+              class="project-card"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal2"
+            >
+              <div class="project-image project-job">
+                <div class="project-overlay">
+                  <button class="view-details-btn">
+                    <i class="fas fa-eye me-2"></i>View Details
+                  </button>
+                </div>
+              </div>
+              <div class="p-3">
+                <h5 class="mb-2">Job Search Platform</h5>
+                <p class="text-muted mb-3">
+                  A platform that connects job seekers with employers
+                  effectively.
+                </p>
+                <div>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">Vue.js</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div
+              class="project-card"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal3"
+            >
+              <div class="project-image project-3">
+                <div class="project-overlay">
+                  <button class="view-details-btn">
+                    <i class="fas fa-eye me-2"></i>View Details
+                  </button>
+                </div>
+              </div>
+              <div class="p-3">
+                <h5 class="mb-2">BestPrice</h5>
+                <p class="text-muted mb-3">
+                  A web application that collects and compares product prices
+                  across multiple e-commerce platforms.
+                </p>
+                <div>
+                  <span class="tech-tag">.NET</span>
+                  <span class="tech-tag">Vue.js</span>
+                  <span class="tech-tag">Selenium</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div
+              class="project-card"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal4"
+            >
+              <div class="project-image project-4">
+                <div class="project-overlay">
+                  <button class="view-details-btn">
+                    <i class="fas fa-eye me-2"></i>View Details
+                  </button>
+                </div>
+              </div>
+              <div class="p-3">
+                <h5 class="mb-2">OCR Information Extraction</h5>
+                <p class="text-muted mb-3">
+                  A system that scans documents, extracts key information using
+                  OCR and Transformer models, and stores structured data for
+                  later retrieval.
+                </p>
+                <div>
+                  <span class="tech-tag">Django</span>
+                  <span class="tech-tag">Transformer OCR</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="skill-card">
+              <h5>
+                <i class="fas fa-code me-2"></i>Frameworks and Technologies
+              </h5>
+              <div>
+                <span class="skill-item">Java</span>
+                <span class="skill-item">Spring Framework</span>
+                <span class="skill-item">Spring Boot</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">Vue.js</span>
+                <span class="skill-item">HTML</span>
+                <span class="skill-item">CSS</span>
+                <span class="skill-item">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="skill-card">
+              <h5><i class="fas fa-database me-2"></i>Database</h5>
+              <div>
+                <span class="skill-item">MySQL</span>
+                <span class="skill-item">PostgreSQL</span>
+                <span class="skill-item">SQL Server</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="skill-card">
+              <h5><i class="fas fa-tools me-2"></i>Tools & Others</h5>
+              <div>
+                <span class="skill-item">Git</span>
+                <span class="skill-item">Docker</span>
+                <span class="skill-item">Postman</span>
+                <span class="skill-item">DBeaver</span>
+                <span class="skill-item">Jira</span>
+                <span class="skill-item">RabbitMQ</span>
+                <span class="skill-item">WebSocket</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="mb-4">Liên Hệ</h2>
+          <div class="d-flex justify-content-center flex-wrap">
+            <a href="mailto:vancongchithanh@gmail.com" class="contact-item">
+              <i class="fas fa-envelope"></i>
+              vancongchithanh@gmail.com
+            </a>
+            <a href="tel:+84123456789" class="contact-item">
+              <i class="fas fa-phone"></i>
+              +84 123 456 789
+            </a>
+            <a
+              href="https://github.com/VanCongChiThanh"
+              class="contact-item"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/vancongchithanh"
+              class="contact-item"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+              LinkedIn
+            </a>
+          </div>
+          <p class="mt-4 mb-0">
+            &copy; 2024 Văn Công Chí Thành. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Modals -->
+
+    <!-- Modal 1: AI Speaking Practice -->
+    <div class="modal fade" id="projectModal1" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="fas fa-robot me-2"></i>AI Speaking Practice
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div
+                  class="project-image project-ai mb-3"
+                  style="height: 250px; border-radius: 10px"
+                ></div>
+              </div>
+              <div class="col-md-6">
+                <h6>Timeline: 06/2025 - 07/2025</h6>
+                <p>
+                  A web application for practicing English speaking with AI and
+                  real-time conversation. Built with a multi-module structure
+                  using RESTful APIs and real-time group chat with WebSocket.
+                </p>
+                <h6>Main Features:</h6>
+                <ul class="feature-list">
+                  <li>
+                    User authentication and authorization with JWT and OAuth 2.0
+                    (Google, Facebook)
+                  </li>
+                  <li>AI integration (Gemini) for speaking feedback</li>
+                  <li>File upload handling using Cloudinary and GCS</li>
+                  <li>
+                    Email sending and push notifications (RabbitMQ + WebSocket)
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h6>Technologies Used:</h6>
+              <div class="mb-3">
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">Spring Security</span>
+                <span class="tech-tag">JWT</span>
+                <span class="tech-tag">OAuth 2.0</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">WebSocket</span>
+                <span class="tech-tag">RabbitMQ</span>
+                <span class="tech-tag">Gemini AI</span>
+                <span class="tech-tag">Cloudinary</span>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <a
+                  href="https://github.com/VanCongChiThanh/ITalk-BE"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  <i class="fab fa-github me-2"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2: Job Search Platform -->
+    <div class="modal fade" id="projectModal2" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="fas fa-briefcase me-2"></i>Job Search Platform
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div
+                  class="project-image project-job mb-3"
+                  style="height: 250px; border-radius: 10px"
+                ></div>
+              </div>
+              <div class="col-md-6">
+                <h6>Timeline: 09/2024 - 12/2024</h6>
+                <p>
+                  A platform that connects job seekers with employers, featuring
+                  RESTful APIs for job posting management, applicant tracking,
+                  and user management.
+                </p>
+                <h6>Main Features:</h6>
+                <ul class="feature-list">
+                  <li>
+                    Authentication and authorization with JWT and OAuth 2.0
+                  </li>
+                  <li>Job posting and applicant profile management</li>
+                  <li>CV upload and management using Cloudinary</li>
+                  <li>Frontend developed with Vue.js and Bootstrap</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h6>Technologies Used:</h6>
+              <div class="mb-3">
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">Spring Security</span>
+                <span class="tech-tag">JWT</span>
+                <span class="tech-tag">OAuth 2.0</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Vue.js</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">Cloudinary</span>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <a
+                  href="https://github.com/VanCongChiThanh/JobLinker"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  <i class="fab fa-github me-2"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3: BestPrice -->
+    <div class="modal fade" id="projectModal3" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="fas fa-project-diagram me-2"></i>BestPrice
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div
+                  class="project-image project-3 mb-3"
+                  style="height: 250px; border-radius: 10px"
+                ></div>
+              </div>
+              <div class="col-md-6">
+                <h6>Timeline: 03/2025 - 05/2025</h6>
+                <p>
+                  A web application that crawls and compares product prices
+                  across multiple e-commerce platforms, helping users find the
+                  best deals efficiently.
+                </p>
+                <h6>Main Features:</h6>
+                <ul class="feature-list">
+                  <li>
+                    Data crawling from various e-commerce sites using Selenium
+                  </li>
+                  <li>RESTful API for fetching and displaying product data</li>
+                  <li>Admin dashboard to trigger crawling and manage data</li>
+                  <li>
+                    Frontend with price comparison and filtering by platform
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h6>Technologies Used:</h6>
+              <div class="mb-3">
+                <span class="tech-tag">.NET</span>
+                <span class="tech-tag">Vue.js</span>
+                <span class="tech-tag">Selenium</span>
+                <span class="tech-tag">SQL Server</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <a
+                  href="https://github.com/VanCongChiThanh/BestPrice"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  <i class="fab fa-github me-2"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4: OCR Information Extraction -->
+    <div class="modal fade" id="projectModal4" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="fas fa-cogs me-2"></i>OCR Information Extraction
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div
+                  class="project-image project-4 mb-3"
+                  style="height: 250px; border-radius: 10px"
+                ></div>
+              </div>
+              <div class="col-md-6">
+                <h6>Timeline: 01/2025 - 02/2025</h6>
+                <p>
+                  A system that scans documents, extracts structured information
+                  using OCR and Transformer models, and stores data for
+                  efficient retrieval and analysis.
+                </p>
+                <h6>Main Features:</h6>
+                <ul class="feature-list">
+                  <li>OCR text extraction from images and PDFs</li>
+                  <li>Information extraction using Transformer-based models</li>
+                  <li>Data storage and retrieval via RESTful APIs</li>
+                  <li>
+                    Admin interface for managing and verifying extracted data
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h6>Technologies Used:</h6>
+              <div class="mb-3">
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">Transformer OCR</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">RESTful API</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <a
+                  href="https://github.com/VanCongChiThanh/OCR-Information-Extraction"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  <i class="fab fa-github me-2"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Add fade-in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+          }
+        });
+      }, observerOptions);
+
+      // Observe all cards
+      document
+        .querySelectorAll(".experience-card, .project-card, .skill-card")
+        .forEach((card) => {
+          observer.observe(card);
+        });
+    </script>
+  </body>
+</html>
