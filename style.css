@@ -410,28 +410,175 @@ body {
   border-radius: 2px;
 }
 
-/* Cards */
-.experience-card,
-.skill-card {
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--accent-color)
+  );
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 80px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 22px;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: var(--shadow-md);
+  z-index: 1;
+}
+
+.timeline-marker.education {
+  background: var(--secondary-color);
+}
+
+.timeline-content {
+  position: relative;
+}
+
+.timeline-card {
   background: white;
   border-radius: 20px;
   padding: 2rem;
   box-shadow: var(--shadow-md);
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  height: 100%;
+  position: relative;
 }
 
-.experience-card:hover,
-.skill-card:hover {
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 30px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 12px solid white;
+  filter: drop-shadow(-2px 0 2px rgba(0, 0, 0, 0.1));
+}
+
+.timeline-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-xl);
 }
 
-.experience-card h5 {
+.company-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  background: white;
+  padding: 8px;
+}
+
+.education-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--accent-color)
+  );
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.education-card {
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.05),
+    rgba(6, 182, 212, 0.05)
+  );
+  border: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.experience-list li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
   color: var(--primary-color);
+  font-size: 0.8rem;
+}
+
+.education-details {
+  margin-top: 1.5rem;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.achievement-icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+  width: 40px;
+  text-align: center;
+}
+
+.achievement-text strong {
+  display: block;
+  color: var(--text-dark);
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.achievement-text small {
+  color: var(--text-light);
+  font-size: 0.85rem;
 }
 
 .company-name {
@@ -445,6 +592,22 @@ body {
   font-size: 0.9rem;
   margin-bottom: 1rem;
   font-weight: 500;
+}
+
+/* Skill Cards */
+.skill-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
 }
 
 /* Project Cards */
@@ -771,6 +934,40 @@ body {
     width: 45px;
     height: 45px;
     font-size: 1.5rem;
+  }
+
+  /* Timeline Mobile Styles */
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-item {
+    padding-left: 50px;
+  }
+
+  .timeline-marker {
+    left: 7px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .timeline-card::before {
+    left: -8px;
+    border-right-width: 8px;
+  }
+
+  .company-logo,
+  .education-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .timeline-card {
+    padding: 1.5rem;
+  }
+
+  .achievement-item {
+    padding: 0.75rem;
   }
 }
 
