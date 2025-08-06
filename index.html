@@ -12,29 +12,104 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a
+          class="navbar-brand fw-bold"
+          href="#"
+          style="color: var(--primary-color)"
+        >
+          <i class="fas fa-code me-2"></i>VanCongChiThanh
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container">
-        <div class="hero-content fade-in">
-          <h1>Van Cong Chi Thanh</h1>
-          <p>Backend Developer | Software Engineering Student</p>
-          <div class="mt-4">
-            <a href="#projects" class="btn btn-light btn-lg me-3">
-              <i class="fas fa-code me-2"></i>View Projects
-            </a>
-            <a href="#contact" class="btn btn-outline-light btn-lg">
-              <i class="fas fa-envelope me-2"></i>Contact
-            </a>
+        <div class="row align-items-center min-vh-100">
+          <div class="col-lg-6">
+            <div class="hero-content fade-in">
+              <div class="hero-greeting">
+                <span class="greeting-text">HI, I'M THANH!</span>
+                <h1 class="hero-title">
+                  CREATIVE <span class="highlight">DEVELOPER</span>
+                </h1>
+              </div>
+              <p class="hero-description">
+                I'm a passionate full-stack developer with a mission to create
+                delightful and intuitive digital experiences. I enjoy exploring
+                new technologies and building amazing things that captivate and
+                engage.
+              </p>
+              <div class="hero-buttons mt-4">
+                <a href="#projects" class="btn btn-primary">
+                  <i class="fas fa-download me-2"></i>Download CV
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                  <i class="fas fa-play me-2"></i>Watch The Video
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image-container fade-in">
+              <div class="hero-image-frame">
+                <div class="hero-avatar">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/thumbnails/011/153/368/small_2x/3d-website-developer-working-on-laptop-illustration-png.png"
+                    alt=""
+                  />
+                </div>
+                <div class="floating-elements">
+                  <div class="floating-element element-1">💻</div>
+                  <div class="floating-element element-2">🚀</div>
+                  <div class="floating-element element-3">⚡</div>
+                  <div class="floating-element element-4">🎯</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section class="py-5">
+    <section class="py-5" id="about">
       <div class="container">
         <h2 class="section-title">About Me</h2>
         <div class="row justify-content-center">
@@ -54,7 +129,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light" id="experience">
       <div class="container">
         <h2 class="section-title">Work experience & Education</h2>
         <div class="row g-4">
@@ -90,10 +165,10 @@
               </div>
               <div class="duration">2022 - Present</div>
               <ul class="mb-0">
-                <li>GPA: 3.51/4</li>
+                <li>GPA: 3.53/4</li>
                 <li>
-                  TOEIC: 645 (03/2024) - Able to read documents and communicate
-                  at an intermediate level.
+                  TOEIC: 645 (03/2024) - Intermediate in reading documentation
+                  and team/technical communication.
                 </li>
                 <li>CES English Club</li>
               </ul>
@@ -123,15 +198,18 @@
                 </div>
               </div>
               <div class="p-3">
-                <h5 class="mb-2">AI Speaking Practice</h5>
+                <h5 class="mb-2">ITalk</h5>
                 <p class="text-muted mb-3">
-                  A web application for practicing English speaking with AI and
-                  real-time conversation.
+                  A social app to improve English speaking through AI-powered
+                  challenges with speaking challenges, newsfeed, short videos,
+                  leaderboard, and real-time group chat.
                 </p>
                 <div>
                   <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">PostgreSQL</span>
                   <span class="tech-tag">WebSocket</span>
-                  <span class="tech-tag">AI Integration</span>
+                  <span class="tech-tag">RabbitMQ</span>
+                  <span class="tech-tag">Gemini AI</span>
                 </div>
               </div>
             </div>
@@ -220,12 +298,71 @@
               </div>
             </div>
           </div>
+
+          <div class="col-lg-6">
+            <div
+              class="project-card"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal5"
+            >
+              <div class="project-image project-5">
+                <div class="project-overlay">
+                  <button class="view-details-btn">
+                    <i class="fas fa-eye me-2"></i>View Details
+                  </button>
+                </div>
+              </div>
+              <div class="p-3">
+                <h5 class="mb-2">Microsoft Teams Clone</h5>
+                <p class="text-muted mb-3">
+                  Collaboration tool with chat, video calls, calendar sync,
+                  screen sharing, and whiteboard functionality.
+                </p>
+                <div>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">React.js</span>
+                  <span class="tech-tag">MongoDB</span>
+                  <span class="tech-tag">Socket.IO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div
+              class="project-card"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal6"
+            >
+              <div class="project-image project-6">
+                <div class="project-overlay">
+                  <button class="view-details-btn">
+                    <i class="fas fa-eye me-2"></i>View Details
+                  </button>
+                </div>
+              </div>
+              <div class="p-3">
+                <h5 class="mb-2">EduWeb - Course Management System</h5>
+                <p class="text-muted mb-3">
+                  A comprehensive education platform for course management,
+                  student registration, and user authentication with role-based
+                  access control.
+                </p>
+                <div>
+                  <span class="tech-tag">JSP</span>
+                  <span class="tech-tag">Servlet</span>
+                  <span class="tech-tag">Bootstrap</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light" id="skills">
       <div class="container">
         <h2 class="section-title">Skills</h2>
         <div class="row g-4">
@@ -236,10 +373,12 @@
               </h5>
               <div>
                 <span class="skill-item">Java</span>
+                <span class="skill-item">JavaScript/TypeScript</span>
                 <span class="skill-item">Spring Framework</span>
                 <span class="skill-item">Spring Boot</span>
-                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">Node.js (ExpressJS)</span>
                 <span class="skill-item">Vue.js</span>
+                <span class="skill-item">React.js</span>
                 <span class="skill-item">HTML</span>
                 <span class="skill-item">CSS</span>
                 <span class="skill-item">Bootstrap</span>
@@ -253,6 +392,7 @@
                 <span class="skill-item">MySQL</span>
                 <span class="skill-item">PostgreSQL</span>
                 <span class="skill-item">SQL Server</span>
+                <span class="skill-item">MongoDB</span>
               </div>
             </div>
           </div>
@@ -267,6 +407,7 @@
                 <span class="skill-item">Jira</span>
                 <span class="skill-item">RabbitMQ</span>
                 <span class="skill-item">WebSocket</span>
+                <span class="skill-item">Socket.IO</span>
               </div>
             </div>
           </div>
@@ -319,9 +460,7 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">
-              <i class="fas fa-robot me-2"></i>AI Speaking Practice
-            </h5>
+            <h5 class="modal-title"><i class="fas fa-robot me-2"></i>ITalk</h5>
             <button
               type="button"
               class="btn-close"
@@ -329,28 +468,62 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div class="row">
-              <div class="col-md-6">
-                <div
-                  class="project-image project-ai mb-3"
-                  style="height: 250px; border-radius: 10px"
-                ></div>
+            <!-- Project Image -->
+            <div class="project-demo-image mb-4">
+              <img
+                src="./image/italk-ui.png"
+                alt="ITalk Demo"
+                class="img-fluid rounded shadow-lg"
+              />
+            </div>
+
+            <!-- Project Details -->
+            <div class="project-details">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-card">
+                    <h6 class="detail-title">
+                      <i class="fas fa-calendar me-2"></i>Timeline
+                    </h6>
+                    <p class="detail-content">06/2025 - 07/2025</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="detail-card">
+                    <h6 class="detail-title">
+                      <i class="fas fa-users me-2"></i>Team Size
+                    </h6>
+                    <p class="detail-content">Individual Project</p>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-6">
-                <h6>Timeline: 06/2025 - 07/2025</h6>
-                <p>
-                  A web application for practicing English speaking with AI and
-                  real-time conversation. Built with a multi-module structure
-                  using RESTful APIs and real-time group chat with WebSocket.
+
+              <div class="detail-card mt-3">
+                <h6 class="detail-title">
+                  <i class="fas fa-info-circle me-2"></i>About Project
+                </h6>
+                <p class="detail-content">
+                  A social app to improve English speaking through AI-powered
+                  challenges. Built with a multi-module structure using RESTful
+                  APIs and real-time group chat with WebSocket.
                 </p>
-                <h6>Main Features:</h6>
+              </div>
+
+              <div class="detail-card mt-3">
+                <h6 class="detail-title">
+                  <i class="fas fa-star me-2"></i>Key Features
+                </h6>
                 <ul class="feature-list">
+                  <li>
+                    AI feedback for speaking practice with speaking challenges,
+                    newsfeed, short videos, and leaderboard
+                  </li>
                   <li>
                     User authentication and authorization with JWT and OAuth 2.0
                     (Google, Facebook)
                   </li>
-                  <li>AI integration (Gemini) for speaking feedback</li>
-                  <li>File upload handling using Cloudinary and GCS</li>
+                  <li>Integrated Gemini AI for real-time speaking analysis</li>
+                  <li>Media uploads via Cloudinary GCS</li>
                   <li>
                     Email sending and push notifications (RabbitMQ + WebSocket)
                   </li>
@@ -369,6 +542,7 @@
                 <span class="tech-tag">RabbitMQ</span>
                 <span class="tech-tag">Gemini AI</span>
                 <span class="tech-tag">Cloudinary</span>
+                <span class="tech-tag">GCS</span>
               </div>
               <div
                 class="d-flex align-items-center justify-content-center gap-2"
@@ -402,21 +576,51 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div class="row">
-              <div class="col-md-6">
-                <div
-                  class="project-image project-job mb-3"
-                  style="height: 250px; border-radius: 10px"
-                ></div>
+            <!-- Project Image -->
+            <div class="project-demo-image mb-4">
+              <img
+                src="./image/job-ui.png"
+                alt="Job Search Platform Demo"
+                class="img-fluid rounded shadow-lg"
+              />
+            </div>
+
+            <!-- Project Details -->
+            <div class="project-details">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-card">
+                    <h6 class="detail-title">
+                      <i class="fas fa-calendar me-2"></i>Timeline
+                    </h6>
+                    <p class="detail-content">09/2024 - 12/2024</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="detail-card">
+                    <h6 class="detail-title">
+                      <i class="fas fa-users me-2"></i>Team Size
+                    </h6>
+                    <p class="detail-content">Individual Project</p>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-6">
-                <h6>Timeline: 09/2024 - 12/2024</h6>
-                <p>
+
+              <div class="detail-card mt-3">
+                <h6 class="detail-title">
+                  <i class="fas fa-info-circle me-2"></i>About Project
+                </h6>
+                <p class="detail-content">
                   A platform that connects job seekers with employers, featuring
                   RESTful APIs for job posting management, applicant tracking,
                   and user management.
                 </p>
-                <h6>Main Features:</h6>
+              </div>
+
+              <div class="detail-card mt-3">
+                <h6 class="detail-title">
+                  <i class="fas fa-star me-2"></i>Key Features
+                </h6>
                 <ul class="feature-list">
                   <li>
                     Authentication and authorization with JWT and OAuth 2.0
@@ -471,21 +675,51 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div class="row">
-              <div class="col-md-6">
-                <div
-                  class="project-image project-3 mb-3"
-                  style="height: 250px; border-radius: 10px"
-                ></div>
+            <!-- Project Image -->
+            <div class="project-demo-image mb-4">
+              <img
+                src="./image/bestprice-ui.png"
+                alt="BestPrice Demo"
+                class="img-fluid rounded shadow-lg"
+              />
+            </div>
+
+            <!-- Project Details -->
+            <div class="project-details">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-card">
+                    <h6 class="detail-title">
+                      <i class="fas fa-calendar me-2"></i>Timeline
+                    </h6>
+                    <p class="detail-content">03/2025 - 05/2025</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="detail-card">
+                    <h6 class="detail-title">
+                      <i class="fas fa-users me-2"></i>Team Size
+                    </h6>
+                    <p class="detail-content">Individual Project</p>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-6">
-                <h6>Timeline: 03/2025 - 05/2025</h6>
-                <p>
+
+              <div class="detail-card mt-3">
+                <h6 class="detail-title">
+                  <i class="fas fa-info-circle me-2"></i>About Project
+                </h6>
+                <p class="detail-content">
                   A web application that crawls and compares product prices
                   across multiple e-commerce platforms, helping users find the
                   best deals efficiently.
                 </p>
-                <h6>Main Features:</h6>
+              </div>
+
+              <div class="detail-card mt-3">
+                <h6 class="detail-title">
+                  <i class="fas fa-star me-2"></i>Key Features
+                </h6>
                 <ul class="feature-list">
                   <li>
                     Data crawling from various e-commerce sites using Selenium
@@ -539,21 +773,51 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div class="row">
-              <div class="col-md-6">
-                <div
-                  class="project-image project-4 mb-3"
-                  style="height: 250px; border-radius: 10px"
-                ></div>
+            <!-- Project Image -->
+            <div class="project-demo-image mb-4">
+              <img
+                src="./image/ocr-ui.png"
+                alt="OCR Information Extraction Demo"
+                class="img-fluid rounded shadow-lg"
+              />
+            </div>
+
+            <!-- Project Details -->
+            <div class="project-details">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-card">
+                    <h6 class="detail-title">
+                      <i class="fas fa-calendar me-2"></i>Timeline
+                    </h6>
+                    <p class="detail-content">01/2025 - 02/2025</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="detail-card">
+                    <h6 class="detail-title">
+                      <i class="fas fa-users me-2"></i>Team Size
+                    </h6>
+                    <p class="detail-content">Individual Project</p>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-6">
-                <h6>Timeline: 01/2025 - 02/2025</h6>
-                <p>
+
+              <div class="detail-card mt-3">
+                <h6 class="detail-title">
+                  <i class="fas fa-info-circle me-2"></i>About Project
+                </h6>
+                <p class="detail-content">
                   A system that scans documents, extracts structured information
                   using OCR and Transformer models, and stores data for
                   efficient retrieval and analysis.
                 </p>
-                <h6>Main Features:</h6>
+              </div>
+
+              <div class="detail-card mt-3">
+                <h6 class="detail-title">
+                  <i class="fas fa-star me-2"></i>Key Features
+                </h6>
                 <ul class="feature-list">
                   <li>OCR text extraction from images and PDFs</li>
                   <li>Information extraction using Transformer-based models</li>
@@ -590,23 +854,242 @@
       </div>
     </div>
 
+    <!-- Modal 5: Microsoft Teams Clone -->
+    <div class="modal fade" id="projectModal5" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="fas fa-users me-2"></i>Microsoft Teams Clone
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Project Image -->
+            <div class="project-demo-image mb-4">
+              <img
+                src="./image/teams-ui.png"
+                alt="Microsoft Teams Clone Demo"
+                class="img-fluid rounded shadow-lg"
+              />
+            </div>
+
+            <!-- Project Details -->
+            <div class="project-details">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-card">
+                    <h6 class="detail-title">
+                      <i class="fas fa-calendar me-2"></i>Timeline
+                    </h6>
+                    <p class="detail-content">07/2025 - 08/2025</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="detail-card">
+                    <h6 class="detail-title">
+                      <i class="fas fa-users me-2"></i>Team Size
+                    </h6>
+                    <p class="detail-content">Individual Project</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="detail-card mt-3">
+                <h6 class="detail-title">
+                  <i class="fas fa-info-circle me-2"></i>About Project
+                </h6>
+                <p class="detail-content">
+                  Collaboration tool with chat, video calls, calendar sync,
+                  screen sharing, and whiteboard functionality. Built with
+                  real-time communication features and Microsoft Graph API
+                  integration.
+                </p>
+              </div>
+
+              <div class="detail-card mt-3">
+                <h6 class="detail-title">
+                  <i class="fas fa-star me-2"></i>Key Features
+                </h6>
+                <ul class="feature-list">
+                  <li>
+                    Real-time chat, video calls, and screen sharing using
+                    Socket.IO and Agora SDK
+                  </li>
+                  <li>
+                    Microsoft login and calendar sync via Microsoft Graph API
+                  </li>
+                  <li>Voice commands integration with Alan AI</li>
+                  <li>Whiteboard functionality for collaborative work</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h6>Technologies Used:</h6>
+              <div class="mb-3">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Socket.IO</span>
+                <span class="tech-tag">Agora SDK</span>
+                <span class="tech-tag">Microsoft Graph API</span>
+                <span class="tech-tag">Alan AI</span>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <a
+                  href="https://github.com/VanCongChiThanh/Microsoft-Teams-Clone"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  <i class="fab fa-github me-2"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6: EduWeb - Course Management System -->
+    <div class="modal fade" id="projectModal6" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="fas fa-graduation-cap me-2"></i>EduWeb - Course
+              Management System
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Project Image -->
+            <div class="project-demo-image mb-4">
+              <img
+                src="./image/eduweb.png"
+                alt="EduWeb Course Management Demo"
+                class="img-fluid rounded shadow-lg"
+              />
+            </div>
+
+            <!-- Project Details -->
+            <div class="project-details">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-card">
+                    <h6 class="detail-title">
+                      <i class="fas fa-calendar me-2"></i>Timeline
+                    </h6>
+                    <p class="detail-content">04/2024 - 06/2024</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="detail-card">
+                    <h6 class="detail-title">
+                      <i class="fas fa-users me-2"></i>Team Size
+                    </h6>
+                    <p class="detail-content">3 Members</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="detail-card mt-3">
+                <h6 class="detail-title">
+                  <i class="fas fa-info-circle me-2"></i>About Project
+                </h6>
+                <p class="detail-content">
+                  A comprehensive education platform for managing courses,
+                  student registrations, and user authentication. Built with
+                  Java Servlet technology and Bootstrap for responsive design.
+                </p>
+              </div>
+
+              <div class="detail-card mt-3">
+                <h6 class="detail-title">
+                  <i class="fas fa-star me-2"></i>Key Features
+                </h6>
+                <ul class="feature-list">
+                  <li>
+                    Course management with search and filtering capabilities
+                  </li>
+                  <li>Student registration system with application tracking</li>
+                  <li>Role-based authentication (Guest, User, Admin)</li>
+                  <li>
+                    Admin dashboard for managing courses, users, and
+                    registrations
+                  </li>
+                  <li>Responsive layout with Bootstrap framework</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h6>Technologies Used:</h6>
+              <div class="mb-3">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">JSP</span>
+                <span class="tech-tag">Servlet</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <a
+                  href="https://github.com/ldkhanh15/LTM"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  <i class="fab fa-github me-2"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.style.background = "rgba(255, 255, 255, 0.98)";
+          navbar.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.1)";
+        } else {
+          navbar.style.background = "rgba(255, 255, 255, 0.95)";
+          navbar.style.boxShadow = "0 1px 2px 0 rgb(0 0 0 / 0.05)";
+        }
+      });
+
       // Smooth scrolling for anchor links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute("href"));
           if (target) {
-            target.scrollIntoView({
+            const offsetTop = target.offsetTop - 80; // Account for navbar height
+            window.scrollTo({
+              top: offsetTop,
               behavior: "smooth",
-              block: "start",
             });
           }
         });
       });
 
-      // Add fade-in animation on scroll
+      // Intersection Observer for animations
       const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
@@ -620,12 +1103,43 @@
         });
       }, observerOptions);
 
-      // Observe all cards
-      document
-        .querySelectorAll(".experience-card, .project-card, .skill-card")
-        .forEach((card) => {
-          observer.observe(card);
+      // Observe all cards and sections
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelectorAll(
+            ".experience-card, .project-card, .skill-card, .section-title"
+          )
+          .forEach((card) => {
+            observer.observe(card);
+          });
+      });
+
+      // Tech tag hover effects
+      document.addEventListener("DOMContentLoaded", function () {
+        const techTags = document.querySelectorAll(".tech-tag");
+        techTags.forEach((tag) => {
+          tag.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-3px) scale(1.05)";
+          });
+          tag.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+          });
         });
+      });
+
+      // Project card tilt effect
+      document.addEventListener("DOMContentLoaded", function () {
+        const projectCards = document.querySelectorAll(".project-card");
+        projectCards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-10px) rotateX(5deg)";
+            this.style.transition = "all 0.3s ease";
+          });
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) rotateX(0deg)";
+          });
+        });
+      });
     </script>
   </body>
 </html>
