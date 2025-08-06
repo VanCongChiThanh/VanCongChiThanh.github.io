@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Văn Công Chí Thành</title>
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Portfolio - Văn Công Chí Thanh</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,7 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=1.1" />
   </head>
   <body>
     <!-- Navigation -->
@@ -1138,6 +1144,13 @@
           card.addEventListener("mouseleave", function () {
             this.style.transform = "translateY(0) rotateX(0deg)";
           });
+        });
+
+        // Force animation restart for floating elements
+        const floatingElements = document.querySelectorAll(".floating-element");
+        floatingElements.forEach((element, index) => {
+          element.style.animationDelay = `${index}s`;
+          element.style.animationPlayState = "running";
         });
       });
     </script>

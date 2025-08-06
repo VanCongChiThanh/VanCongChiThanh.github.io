@@ -253,43 +253,76 @@ body {
   height: 100%;
 }
 
+/* Fallback for browsers that don't support animations */
+@media (prefers-reduced-motion: reduce) {
+  .floating-element {
+    animation: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+  }
+}
+
+/* Ensure animations work in all browsers */
 .floating-element {
   position: absolute;
   font-size: 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.25); /* Fallback background */
+  background: rgba(255, 255, 255, 0.15);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  -moz-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   width: 60px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-animation: floatElement 4s ease-in-out infinite;
+  -moz-animation: floatElement 4s ease-in-out infinite;
+  -o-animation: floatElement 4s ease-in-out infinite;
   animation: floatElement 4s ease-in-out infinite;
+  will-change: transform;
+  /* Force hardware acceleration */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .element-1 {
   top: 10%;
   left: 20%;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
   animation-delay: 0s;
 }
 
 .element-2 {
   top: 20%;
   right: 15%;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
   animation-delay: 1s;
 }
 
 .element-3 {
   bottom: 25%;
   left: 10%;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
   animation-delay: 2s;
 }
 
 .element-4 {
   bottom: 15%;
   right: 20%;
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
   animation-delay: 3s;
 }
 
@@ -307,8 +340,50 @@ body {
   0%,
   100% {
     transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
   }
   50% {
+    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+  }
+}
+
+@-webkit-keyframes floatElement {
+  0%,
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@-moz-keyframes floatElement {
+  0%,
+  100% {
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@-o-keyframes floatElement {
+  0%,
+  100% {
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -o-transform: translateY(-15px);
     transform: translateY(-15px);
   }
 }
